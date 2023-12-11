@@ -142,8 +142,24 @@ public class Main {
         }
     }
 
-    public static void task3() { // в другом файле
+    public static void task3() { for (int number = 10; number <= 1000000; number++) {
+        int digits = String.valueOf(number).length();
+        int sum = 0;
+        int temp = number;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            temp /= 10;
+        }
+
+        if (sum == number) {
+            System.out.println(number);
+        }
     }
+    }
+
+
 
     public static void task4() { // в другом файле
 
